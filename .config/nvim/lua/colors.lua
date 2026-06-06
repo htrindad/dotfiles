@@ -7,7 +7,7 @@ a =
 	"TelescopeBorder",
 }
 
-vim.cmd("colorscheme leaf")
+vim.cmd("colorscheme vim")
 
 for i = 1, 5 do
 	vim.api.nvim_set_hl(0, a[i], {bg = "none"})
