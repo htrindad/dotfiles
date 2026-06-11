@@ -1,0 +1,12 @@
+[terminal]
+shell = "zsh"
+[font]
+normal = { family = "CodeNewRoman Nerd Font", style = "Regular" }
+size = 15
+[keyboard]
+bindings = [
+	{ key = "+", mods = "Control|Shift", action="IncreaseFontSize" },
+	{ key = "-", mods = "Control", action="DecreaseFontSize" }
+]
+[window]
+opacity = 0.8
