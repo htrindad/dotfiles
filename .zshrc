@@ -86,23 +86,20 @@ alias vim='nvim'
 alias vi='nvim'
 alias nivm='nvim' # Lmao só porque eu escrevo mal o tempo todo
 alias ..='cd ..'
-alias 42cc='cc -Wall -Werror -Wextra'
+alias 42cc='cc -Wall -Werror -Wextra -O3'
 alias ans='git add . && git status'
-alias clp='git clone'
 alias nr='norminette -R CheckForbiddenSourceHeader'
 alias nh='norminette -R CheckDefine'
 alias ftc='./a.out'
-alias cm='git commit -m'
-alias pus='git push'
-alias pul='git pull'
 alias czsh='vim ~/.zshrc'
-alias testl='clp https://github.com/0x050f/libft-war-machine && clp https://github.com/Tripouille/libftTester && bash libft-war-machine/grademe.sh && bash libft-war-machine/grademe.sh && libftTester && make && make fclean && ..'
-alias testp='clp https://github.com/Tripouille/printfTester && printfTester && make && make fclean && ..'
-alias testg='clp https://github.com/Tripouille/gnlTester && gnlTester && make && ..'
+alias testl='gcl https://github.com/0x050f/libft-war-machine && gcl https://github.com/Tripouille/libftTester && bash libft-war-machine/grademe.sh && bash libft-war-machine/grademe.sh && libftTester && make && make fclean && ..'
+alias testp='gcl https://github.com/Tripouille/printfTester && printfTester && make && make fclean && ..'
+alias testg='gcl https://github.com/Tripouille/gnlTester && gnlTester && make && ..'
 alias grademe='bash -c "$(curl https://grademe.fr)"'
-alias psv='clp https://github.com/o-reo/push_swap_visualizer psv && cd psv && mkdir build && build && cmake .. && make && ./bin/visualizer && ../.. && rm -rf psv/'
-alias pst='clp https://github.com/LeoFu9487/push_swap_tester'
+alias psv='gcl https://github.com/o-reo/push_swap_visualizer psv && cd psv && mkdir build && build && cmake .. && make && ./bin/visualizer && ../.. && rm -rf psv/'
+alias pst='gcl https://github.com/LeoFu9487/push_swap_tester'
 alias gimp='/var/lib/flatpak/exports/bin/org.gimp.GIMP'
+alias irclaude='~/Documents/IRC/; claude'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -131,5 +128,13 @@ alias gimp='/var/lib/flatpak/exports/bin/org.gimp.GIMP'
 export USER=htrindad
 export MAIL=htrindad@student.42lisboa.com
 
-export PATH=$PATH:$HOME/usr/bin:$HOME/.local/go/bin:$HOME/usr/bin:$HOME/bin
+export PATH=$PATH:$HOME/usr/bin:$HOME/.local/go/bin:$HOME/usr/bin:$HOME/.local/bin:$HOME/goinfre/.local/bin
 export PYTHONPATH="$HOME/.local/lib/python3.10/site-packages:$PYTHONPATH"
+export CLAUDE_CONFIG_DIR="/goinfre/$USER/.claude"
+
+alias mstest="bash /home/htrindad/42_minishell_tester/tester.sh"
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
