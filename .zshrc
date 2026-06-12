@@ -131,5 +131,5 @@ alias gimp='/var/lib/flatpak/exports/bin/org.gimp.GIMP'
 export USER=htrindad
 export MAIL=htrindad@student.42lisboa.com
 
-export PATH=$PATH:$HOME/usr/bin:$HOME/.local/go/bin:$HOME/usr/bin
+export PATH=$PATH:$HOME/usr/bin:$HOME/.local/go/bin:$HOME/usr/bin:$HOME/bin
 export PYTHONPATH="$HOME/.local/lib/python3.10/site-packages:$PYTHONPATH"
