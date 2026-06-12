@@ -1,0 +1,46 @@
+[terminal]
+shell = "zsh"
+[font]
+normal = { family = "CodeNewRoman Nerd Font", style = "Regular" }
+size = 15
+[keyboard]
+bindings = [
+	{ key = "+", mods = "Control|Shift", action="IncreaseFontSize" },
+	{ key = "-", mods = "Control", action="DecreaseFontSize" }
+]
+[window]
+opacity = 0.8
+
+# Patrick Jane palette — slate-blue suit, white shirt, golden tea & hair
+[colors.primary]
+background = "#182230"
+foreground = "#efe9da"
+dim_foreground = "#b9b6a8"
+
+[colors.cursor]
+text = "#182230"
+cursor = "#e8c35a"
+
+[colors.normal]
+black   = "#2a3645"
+red     = "#cf5b56"
+green   = "#93b070"
+yellow  = "#e8c35a"
+blue    = "#6aa3da"
+magenta = "#9b8fd1"
+cyan    = "#6fb5ad"
+white   = "#efe9da"
+
+[colors.bright]
+black   = "#5a6675"
+red     = "#e07a72"
+green   = "#a8c587"
+yellow  = "#f1d27a"
+blue    = "#87b8e6"
+magenta = "#b6abe0"
+cyan    = "#8acdc5"
+white   = "#fbf7ec"
+
+[colors.selection]
+text = "#182230"
+background = "#e3a86a"

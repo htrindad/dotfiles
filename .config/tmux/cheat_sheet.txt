@@ -1,0 +1,83 @@
+TMUX PRACTICE CHEAT SHEET
+Based on ~/.config/tmux/tmux.conf
+
+Prefix
+- Your tmux prefix is either Ctrl-b or Ctrl-a.
+- In this sheet, "prefix" means press one of those, then the next key.
+
+Start With These Daily
+- prefix c            create a new window
+- prefix p            previous window
+- prefix 1..9         jump directly to window number
+- prefix w            list windows, then pick one
+- prefix ,            rename current window
+- prefix n            prompt for a new session name
+
+Fast Window Jumping
+- Use prefix 1..9 as the main habit. This is the fastest way to move between windows.
+- Your config overrides tmux's usual "next window" key on prefix n, so direct number jumps matter even more here.
+- Keep a stable layout:
+  1 editor
+  2 server
+  3 tests
+  4 git / shell
+- Rename windows so the status bar is easy to scan with prefix w.
+- Use prefix c to make a new window, then prefix , immediately to name it.
+
+Pane Management
+- prefix |            split left/right
+- prefix -            split top/bottom
+- prefix o            move to next pane
+- prefix ;            go back to last active pane
+- prefix z            zoom/unzoom pane
+- prefix m            zoom/unzoom pane (custom binding)
+
+Pane Resizing
+- prefix h            resize pane left
+- prefix j            resize pane down
+- prefix k            resize pane up
+- prefix l            resize pane right
+
+Pane And Vim Movement
+- Plugin installed: vim-tmux-navigator
+- Usually Ctrl-h / Ctrl-j / Ctrl-k / Ctrl-l moves between Vim splits and tmux panes.
+- This is most useful when you work in Vim inside tmux and want pane movement to feel the same.
+
+Copy Mode
+- prefix v            enter copy mode
+- In copy mode:
+  v                   begin selection
+  y                   copy selection
+- mode-keys is set to vi, so movement in copy mode follows Vim-style keys.
+
+Sessions
+- prefix n            prompt for a new session name, then create it
+- prefix f            open tmux-sessionizer helper in a new window
+- Plugin installed: tmux-sessionx
+  - configured bind is prefix o
+  - note: tmux also uses prefix o for next pane, so if sessionx is active on prefix o, that overlaps with the normal tmux binding
+  - if prefix o does not move to next pane, that plugin binding is the reason
+
+Reload Config
+- prefix r            reload ~/.config/tmux/tmux.conf
+
+Useful Defaults Worth Practicing
+- prefix d            detach session
+- tmux attach         reattach from shell
+- prefix ?            show all key bindings
+- prefix :            command prompt for raw tmux commands
+
+Suggested 10-Minute Practice
+1. Create 4 windows and name them: editor, server, tests, git.
+2. Jump between them using prefix 1..4 until it feels automatic.
+3. Use prefix w and select a window from the list.
+4. Split one window with | and -, then move around panes with prefix o and prefix ;.
+5. Resize panes with prefix h/j/k/l.
+6. Enter copy mode with prefix v, select with v, and copy with y.
+7. Detach with prefix d and reattach from shell with tmux attach.
+
+Recommended Habits
+- Prefer more windows, fewer panes, when tasks are distinct.
+- Use pane splits for one task that needs side-by-side context.
+- Keep low window numbers reserved for repeat roles so prefix 1..4 becomes muscle memory.
+- Rename windows immediately; unnamed windows are harder to jump to quickly.
